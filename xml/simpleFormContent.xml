@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simpleForm>
+    <entry label="Order">324,000.00€</entry>
+    <entry label="Invoice">234,000.00€</entry>
+    <entry label="Payment">84,000.00€</entry>
+    <entry label="Order">98,000.00€</entry>
+    <entry label="Payment">124,000.00€</entry>
+    <entry label="Order">254,000.00€</entry>
+    <entry label="Invoice">545,000.00€</entry>
+    <entry label="Payment">234,000.00€</entry>
+    <entry label="Order">24,000.00€</entry>
+    <entry label="Payment">23,000.00€</entry>
+</simpleForm>

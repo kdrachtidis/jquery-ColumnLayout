@@ -1,0 +1,88 @@
+/* Initialize default values --------------------------------------------------------------------------------*/
+body, html {
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+section, header, nav, aside, article, footer, div, dl, dt, dd, ol, ul, li, span, form, fieldset, legend, h1, h2, h3, h4, h5, h6, p, button {
+    float: left;
+    display: block;
+    width: auto;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: normal;
+    font-variant: normal;
+    font-family: sans-serif;
+    text-indent: 0;
+    text-align: left;
+    text-transform: none;
+    word-spacing: normal;
+    overflow-wrap: break-word;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    background: none;
+}
+input, select {
+    border-width: 1px;
+    border-style: solid;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    width: 98%;
+    float: left;
+    display: block;
+    position: relative;
+    margin: 0;
+    outline: 0;
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: normal;
+    font-variant: normal;
+    font-family: sans-serif;
+    text-indent: 0;
+    text-align: left;
+    text-transform: none;
+    word-spacing: normal;
+    overflow-wrap: break-word;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+ol, ul {
+    list-style-type: none;
+}
+button {
+    cursor: pointer;
+}
+header, aside, p {
+    width: 100%;
+}
+section > div {
+    width: 100%;
+}
+section > nav {
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-size: 1em;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}

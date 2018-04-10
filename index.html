@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>UX prototype for exploring patterns and interactions</title>
+
+    <meta charset="UTF-8" />
+    <meta name="author" content="kdrachtidis" />
+    <meta name="keywords" content="prototype, html, ui, ux, user experience" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" />
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="js/import-xml.js"></script>
+    <script type="text/javascript" src="js/layout.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <header id="app-header">
+        <ul class="left">
+            <li>
+                <button type="button" id="home"></button>
+            </li>
+        </ul>
+        <ul class="right">
+            <li>
+                <button type="button" id="search"></button>
+            </li>
+            <li>
+                <button type="button" id="account"></button>
+            </li>
+        </ul>
+    </header>
+    <div id="container" class="">
+        <section id="left-sidebar" class="">
+            <aside class="controls">
+                <ul>
+                    <li class="right">
+                        <button type="button" id="hideLeftSidebar"></button>
+                    </li>
+                </ul>
+            </aside>
+            <header class="title">
+                <span class="label"></span><span class="count"></span>
+            </header>
+            <aside class="search">
+                <input type="search" name="search-group">
+            </aside>
+            <section id="groupslist">
+                <ol></ol>
+            </section>
+        </section>
+        <section id="left-container" class="">
+            <aside class="controls">
+                <ul>
+                    <li>
+                        <button type="button" id="showLeftSidebar"></button>
+                    </li>
+                    <li class="right">
+                        <button type="button" id="hideLeftContainer"></button>
+                    </li>
+                </ul>
+            </aside>
+            <header class="title">
+                <span class="label"></span><span class="count"></span>
+            </header>
+            <aside class="search">
+                <input type="search" name="search-group">
+            </aside>
+            <section id="masterlist"></section>
+        </section>
+        <section id="main-container" class="">
+            <aside class="controls">
+                <ul>
+                    <li>
+                        <button type="button" id="showLeftSection"></button>
+                    </li>
+                    <li>
+                        <button type="button" id="showLeftContainer"></button>
+                    </li>
+                    <li>
+                        <button type="button" id="hideLeftSection"></button>
+                    </li>
+                </ul>
+                <form id="path">
+                    <fieldset id="drop-groupslist">
+                        <legend>
+                            <span class="label"></span><span class="count"></span>
+                        </legend>
+                        <select></select>
+                    </fieldset>
+                    <fieldset id="drop-masterlist">
+                        <legend>
+                            <span class="label"></span><span class="count"></span>
+                        </legend>
+                        <select></select>
+                    </fieldset>
+                </form>
+                <ul class="right">
+                    <li class="right">
+                        <button type="button" id="showRightSection"></button>
+                    </li>
+                    <li class="right">
+                        <button type="button" id="showRightContainer"></button>
+                    </li>
+                    <li class="right">
+                        <button type="button" id="hideRightSection"></button>
+                    </li>
+                </ul>
+            </aside>
+            <section id="objectheader">
+                <div class="header">
+                    <span class="header-1"></span>
+                    <span class="header-2"></span>
+                </div>
+                <div class="kpi">
+                    <ol></ol>
+                </div>
+                <div class="attribute">
+                    <ol></ol>
+                </div>
+                <div class="status">
+                    <ol></ol>
+                </div>
+            </section>
+            <nav id="tabMenu">
+                <ol></ol>
+            </nav>
+            <section id="tabContainer">
+                <section class="form">
+                    <header>
+                        <h4>Form Title</h4>
+                    </header>
+                    <aside class="form-content">
+                    </aside>
+                </section>
+                <section class="form">
+                    <header>
+                        <h4>Form Title</h4>
+                    </header>
+                    <aside class="form-content">
+                    </aside>
+                </section>
+                <section class="form">
+                    <header>
+                        <h4>Form Title</h4>
+                    </header>
+                    <aside class="form-content">
+                    </aside>
+                </section>
+                <section class="form">
+                    <header>
+                        <h4>Form Title</h4>
+                    </header>
+                    <aside class="form-content">
+                    </aside>
+                </section>
+            </section>
+        </section>
+        <section id="right-container" class="">
+            <aside class="controls">
+                <ul>
+                    <li class="right">
+                        <button type="button" id="showRightSidebar"></button>
+                    </li>
+                    <li>
+                        <button type="button" id="hideRightContainer"></button>
+                    </li>
+                </ul>
+            </aside>
+            <header class="title">
+                <span class="label"></span><span class="count"></span>
+            </header>
+            <section id="timeline"></section>
+        </section>
+        <section id="right-sidebar" class="">
+            <aside class="controls">
+                <ul>
+                    <li>
+                        <button type="button" id="hideRightSidebar"></button>
+                    </li>
+                </ul>
+            </aside>
+            <header class="title">
+                <span class="label"></span><span class="count"></span>
+            </header>
+            <section id="resources">
+                <ol></ol>
+            </section>
+        </section>
+    </div>
+</body>
+
+</html>

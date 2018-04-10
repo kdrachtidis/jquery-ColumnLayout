@@ -1,0 +1,583 @@
+/* Large Dekstop ------------------------------------------------------------ */
+
+@media only screen and (min-width: 1681px) and (orientation: landscape) {
+    /* Sections - Main Container -------------------------------------------- */
+    #main-container.TTTT {
+        width: 51%;
+    }
+    #main-container.FTTT,
+    #main-container.TTTF {
+        width: 58%;
+    }
+    #main-container.FTTF {
+        width: 65%;
+    }
+    #main-container.TFTT {
+        width: 66%;
+    }
+    #main-container.TTFT {
+        width: 71%;
+    }
+    #main-container.FFTT {
+        width: 73%;
+    }
+    #main-container.FTFT,
+    #main-container.TTFF,
+    #main-container.TFTF {
+        width: 78%;
+    }
+    #main-container.FFTF {
+        width: 80%;
+    }
+    #main-container.FTFF {
+        width: 85%;
+    }
+    #main-container.TFFT {
+        width: 86%;
+    }
+    #main-container.FFFT,
+    #main-container.TFFF {
+        width: 93%;
+    }
+    #main-container.FFFF {
+        width: 100%;
+    }
+    /* Sections - Left Sidebar ---------------------------------------------- */
+    #left-sidebar.TTTT,
+    #left-sidebar.TTTF,
+    #left-sidebar.TFTT,
+    #left-sidebar.TTFT,
+    #left-sidebar.TTFF,
+    #left-sidebar.TFTF,
+    #left-sidebar.TFFT,
+    #left-sidebar.TFFF {
+        width: 6.99%;
+    }
+    #left-sidebar.FTTT,
+    #left-sidebar.FTTF,
+    #left-sidebar.FFTT,
+    #left-sidebar.FTFT,
+    #left-sidebar.FFTF,
+    #left-sidebar.FTFF,
+    #left-sidebar.FFFT,
+    #left-sidebar.FFFF {
+        width: 0%;
+    }
+    /* Sections - Right Sidebar --------------------------------------------- */
+    #right-sidebar.TTTT,
+    #right-sidebar.FTTT,
+    #right-sidebar.TFTT,
+    #right-sidebar.TTFT,
+    #right-sidebar.FFTT,
+    #right-sidebar.FTFT,
+    #right-sidebar.TFFT,
+    #right-sidebar.FFFT {
+        width: 6.99%;
+    }
+    #right-sidebar.TTTF,
+    #right-sidebar.FTTF,
+    #right-sidebar.TTFF,
+    #right-sidebar.TFTF,
+    #right-sidebar.FFTF,
+    #right-sidebar.FTFF,
+    #right-sidebar.TFFF,
+    #right-sidebar.FFFF {
+        width: 0%;
+    }
+    /* Sections - Left Container -------------------------------------------- */
+    #left-container.TTTT,
+    #left-container.FTTT,
+    #left-container.TTTF,
+    #left-container.FTTF,
+    #left-container.TTFT,
+    #left-container.FTFT,
+    #left-container.TTFF,
+    #left-container.FTFF {
+        width: 14.99%;
+        display: block;
+    }
+    #left-container.TFTT,
+    #left-container.FFTT,
+    #left-container.TFTF,
+    #left-container.FFTF,
+    #left-container.TFFT,
+    #left-container.FFFT,
+    #left-container.TFFF,
+    #left-container.FFFF {
+        width: 0%;
+    }
+    /* Sections - Right Container ------------------------------------------- */
+    #right-container.TTTT,
+    #right-container.FTTT,
+    #right-container.TTTF,
+    #right-container.FTTF,
+    #right-container.TFTT,
+    #right-container.FFTT,
+    #right-container.TFTF,
+    #right-container.FFTF {
+        width: 19.99%;
+        display: block;
+    }
+    #right-container.TTFT,
+    #right-container.FTFT,
+    #right-container.TTFF,
+    #right-container.FTFF,
+    #right-container.TFFT,
+    #right-container.FFFT,
+    #right-container.TFFF,
+    #right-container.FFFF {
+        width: 0%;
+    }
+    /* Controls (Show Sidebar) ---------------------------------------------- */
+    #left-container.TTTT #showLeftSidebar,
+    #left-container.TTTF #showLeftSidebar,
+    #left-container.TFTT #showLeftSidebar,
+    #left-container.TTFT #showLeftSidebar,
+    #left-container.TTFF #showLeftSidebar,
+    #left-container.TFTF #showLeftSidebar,
+    #left-container.TFFT #showLeftSidebar,
+    #left-container.TFFF #showLeftSidebar {
+        display: none;
+    }
+    #left-container.FTTT #showLeftSidebar,
+    #left-container.FTTF #showLeftSidebar,
+    #left-container.FFTT #showLeftSidebar,
+    #left-container.FTFT #showLeftSidebar,
+    #left-container.FFTF #showLeftSidebar,
+    #left-container.FTFF #showLeftSidebar,
+    #left-container.FFFT #showLeftSidebar,
+    #left-container.FFFF #showLeftSidebar {
+        display: block;
+    }
+    #right-container.TTTT #showRightSidebar,
+    #right-container.FTTT #showRightSidebar,
+    #right-container.TFTT #showRightSidebar,
+    #right-container.TTFT #showRightSidebar,
+    #right-container.FFTT #showRightSidebar,
+    #right-container.FTFT #showRightSidebar,
+    #right-container.TFFT #showRightSidebar,
+    #right-container.FFFT #showRightSidebar {
+        display: none;
+    }
+    #right-container.TTTF #showRightSidebar,
+    #right-container.FTTF #showRightSidebar,
+    #right-container.TTFF #showRightSidebar,
+    #right-container.TFTF #showRightSidebar,
+    #right-container.FFTF #showRightSidebar,
+    #right-container.FTFF #showRightSidebar,
+    #right-container.TFFF #showRightSidebar,
+    #right-container.FFFF #showRightSidebar {
+        display: block;
+    }
+    /* Controls (Show All) -------------------------------------------------- */
+    #main-container.TTTT #showLeftSection,
+    #main-container.FTTT #showLeftSection,
+    #main-container.TTTF #showLeftSection,
+    #main-container.FTTF #showLeftSection,
+    #main-container.TTFT #showLeftSection,
+    #main-container.FTFT #showLeftSection,
+    #main-container.TTFF #showLeftSection,
+    #main-container.FTFF #showLeftSection,
+    #main-container.TFTT #showLeftSection,
+    #main-container.TFTF #showLeftSection,
+    #main-container.TFFT #showLeftSection,
+    #main-container.FFFT #showLeftSection,
+    #main-container.TFFF #showLeftSection,
+    #main-container.FFFF #showLeftSection {
+        display: none;
+    }
+    #main-container.FFTT #showLeftSection,
+    #main-container.FFTF #showLeftSection {
+        display: block;
+    }
+    #main-container.TTTT #showRightSection,
+    #main-container.FTTT #showRightSection,
+    #main-container.TTTF #showRightSection,
+    #main-container.FTTF #showRightSection,
+    #main-container.TTFT #showRightSection,
+    #main-container.FTFT #showRightSection,
+    #main-container.TFTT #showRightSection,
+    #main-container.FFTT #showRightSection,
+    #main-container.TFTF #showRightSection,
+    #main-container.FFTF #showRightSection,
+    #main-container.TFFT #showRightSection,
+    #main-container.FFFT #showRightSection,
+    #main-container.TFFF #showRightSection,
+    #main-container.FFFF #showRightSection {
+        display: none;
+    }
+    #main-container.TTFF #showRightSection,
+    #main-container.FTFF #showRightSection {
+        display: block;
+    }
+    /* Controls (Hide All) -------------------------------------------------- */
+    #main-container.TTTT #hideLeftSection,
+    #main-container.TTFT #hideLeftSection,
+    #main-container.TTTF #hideLeftSection,
+    #main-container.TTFF #hideLeftSection {
+        display: block;
+    }
+    #main-container.FTTT #hideLeftSection,
+    #main-container.TFTT #hideLeftSection,
+    #main-container.FFTT #hideLeftSection,
+    #main-container.FTFT #hideLeftSection,
+    #main-container.FTTF #hideLeftSection,
+    #main-container.TFFT #hideLeftSection,
+    #main-container.TFTF #hideLeftSection,
+    #main-container.FFFT #hideLeftSection,
+    #main-container.FFTF #hideLeftSection,
+    #main-container.FTFF #hideLeftSection,
+    #main-container.TFFF #hideLeftSection,
+    #main-container.FFFF #hideLeftSection {
+        display: none;
+    }
+    #main-container.TTTT #hideRightSection,
+    #main-container.FTTT #hideRightSection,
+    #main-container.TFTT #hideRightSection,
+    #main-container.FFTT #hideRightSection {
+        display: block;
+    }
+    #main-container.TTTF #hideRightSection,
+    #main-container.FTTF #hideRightSection,
+    #main-container.TTFT #hideRightSection,
+    #main-container.FTFT #hideRightSection,
+    #main-container.TTFF #hideRightSection,
+    #main-container.FTFF #hideRightSection,
+    #main-container.TFFF #hideRightSection,
+    #main-container.FFFF #hideRightSection,
+    #main-container.FFFF #hideRightSection,
+    #main-container.TFTF #hideRightSection,
+    #main-container.FFTF #hideRightSection,
+    #main-container.FTFF #hideRightSection {
+        display: none;
+    }
+    /* Controls (Show Timeline) --------------------------------------------- */
+    #main-container.TTTT #showRightContainer,
+    #main-container.FTTT #showRightContainer,
+    #main-container.TTTF #showRightContainer,
+    #main-container.TTFF #showRightContainer,
+    #main-container.FTTF #showRightContainer,
+    #main-container.TFTT #showRightContainer,
+    #main-container.FFTT #showRightContainer,
+    #main-container.TFTF #showRightContainer,
+    #main-container.FFTF #showRightContainer {
+        display: none;
+    }
+    #main-container.TTFT #showRightContainer,
+    #main-container.FTFT #showRightContainer,
+    #main-container.FTFF #showRightContainer,
+    #main-container.TFFT #showRightContainer,
+    #main-container.FFFT #showRightContainer,
+    #main-container.TFFF #showRightContainer,
+    #main-container.FFFF #showRightContainer {
+        display: block;
+    }
+    /* Controls (Show Objects) ---------------------------------------------- */
+    #main-container.TTTT #showLeftContainer,
+    #main-container.FTTT #showLeftContainer,
+    #main-container.TTTF #showLeftContainer,
+    #main-container.FTTF #showLeftContainer,
+    #main-container.TTFT #showLeftContainer,
+    #main-container.FTFT #showLeftContainer,
+    #main-container.TTFF #showLeftContainer,
+    #main-container.FTFF #showLeftContainer,
+    #main-container.FFTT #showLeftContainer {
+        display: none;
+    }
+    #main-container.TFTT #showLeftContainer,
+    #main-container.TFTF #showLeftContainer,
+    #main-container.FFTF #showLeftContainer,
+    #main-container.TFFT #showLeftContainer,
+    #main-container.FFFT #showLeftContainer,
+    #main-container.TFFF #showLeftContainer,
+    #main-container.FFFF #showLeftContainer {
+        display: block;
+    }
+}
+
+
+/* Normal Dekstop ----------------------------------------------------------- */
+
+@media only screen and (min-width: 1281px) and (max-width: 1680px) and (orientation: landscape) {
+    /* Sections - Main Container -------------------------------------------- */
+    #main-container.TTTT,
+    #main-container.FTTT,
+    #main-container.TTTF,
+    #main-container.FTTF {
+        width: 65%;
+    }
+    #main-container.TFTT,
+    #main-container.FFTT,
+    #main-container.TFTF,
+    #main-container.FFTF {
+        width: 80%;
+    }
+    #main-container.TTFT,
+    #main-container.FTFT,
+    #main-container.TTFF,
+    #main-container.FTFF {
+        width: 85%;
+    }
+    #main-container.TFFT,
+    #main-container.FFFT,
+    #main-container.TFFF,
+    #main-container.FFFF {
+        width: 100%;
+    }
+    /* Sections - Left Sidebar ---------------------------------------------- */
+    #left-sidebar {
+        display: none;
+    }
+    /* Sections - Right Sidebar --------------------------------------------- */
+    #right-sidebar {
+        display: none;
+    }
+    /* Sections - Left Container -------------------------------------------- */
+    #left-container.TTTT,
+    #left-container.FTTT,
+    #left-container.TTTF,
+    #left-container.FTTF,
+    #left-container.TTFT,
+    #left-container.FTFT,
+    #left-container.TTFF,
+    #left-container.FTFF {
+        width: 14.99%;
+    }
+    #left-container.TFTT,
+    #left-container.FFTT,
+    #left-container.TFTF,
+    #left-container.FFTF,
+    #left-container.TFFT,
+    #left-container.FFFT,
+    #left-container.TFFF,
+    #left-container.FFFF {
+        width: 0%;
+    }
+    /* Sections - Right Container ------------------------------------------- */
+    #right-container.TTTT,
+    #right-container.FTTT,
+    #right-container.TTTF,
+    #right-container.FTTF,
+    #right-container.TFTT,
+    #right-container.FFTT,
+    #right-container.TFTF,
+    #right-container.FFTF {
+        width: 19.99%;
+    }
+    #right-container.TTFT,
+    #right-container.FTFT,
+    #right-container.TTFF,
+    #right-container.FTFF,
+    #right-container.TFFT,
+    #right-container.FFFT,
+    #right-container.TFFF,
+    #right-container.FFFF {
+        width: 0%;
+    }
+    /* Controls (Show Sidebar) ---------------------------------------------- */
+    #showLeftSidebar,
+    #showRightSidebar {
+        display: none;
+    }
+    /* Controls (Hide All) -------------------------------------------------- */
+    #hideLeftSection,
+    #hideRightSection {
+        display: none;
+    }
+    /* Controls (Show All) -------------------------------------------------- */
+    #showLeftSection,
+    #showRightSection {
+        display: none;
+    }
+    /* Controls (Show Timeline) --------------------------------------------- */
+    #main-container.TTTT #showRightContainer,
+    #main-container.FTTT #showRightContainer,
+    #main-container.TTTF #showRightContainer,
+    #main-container.TTFF #showRightContainer,
+    #main-container.FTTF #showRightContainer,
+    #main-container.TFTT #showRightContainer,
+    #main-container.FFTT #showRightContainer,
+    #main-container.TFTF #showRightContainer,
+    #main-container.FFTF #showRightContainer {
+        display: none;
+    }
+    #main-container.TTFT #showRightContainer,
+    #main-container.FTFT #showRightContainer,
+    #main-container.FTFF #showRightContainer,
+    #main-container.TFFT #showRightContainer,
+    #main-container.FFFT #showRightContainer,
+    #main-container.TFFF #showRightContainer,
+    #main-container.FFFF #showRightContainer {
+        display: block;
+    }
+    /* Controls (Show Objects) ---------------------------------------------- */
+    #main-container.TTTT #showLeftContainer,
+    #main-container.FTTT #showLeftContainer,
+    #main-container.TTTF #showLeftContainer,
+    #main-container.FTTF #showLeftContainer,
+    #main-container.TTFT #showLeftContainer,
+    #main-container.FTFT #showLeftContainer,
+    #main-container.TTFF #showLeftContainer,
+    #main-container.FTFF #showLeftContainer,
+    #main-container.FFTT #showLeftContainer {
+        display: none;
+    }
+    #main-container.TFTT #showLeftContainer,
+    #main-container.TFTF #showLeftContainer,
+    #main-container.FFTF #showLeftContainer,
+    #main-container.TFFT #showLeftContainer,
+    #main-container.FFFT #showLeftContainer,
+    #main-container.TFFF #showLeftContainer,
+    #main-container.FFFF #showLeftContainer {
+        display: block;
+    }
+}
+
+
+/* Small Dekstop ------------------------------------------------------------ */
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) and (orientation: landscape) {
+    /* Sections - Main Container -------------------------------------------- */
+    #main-container.TTTT,
+    #main-container.FTTT,
+    #main-container.TTTF,
+    #main-container.FTTF,
+    #main-container.TTFT,
+    #main-container.FTFT,
+    #main-container.TTFF,
+    #main-container.FTFF {
+        width: 85%;
+    }
+    #main-container.TFTT,
+    #main-container.FFTT,
+    #main-container.TFTF,
+    #main-container.FFTF,
+    #main-container.TFFT,
+    #main-container.FFFT,
+    #main-container.TFFF,
+    #main-container.FFFF {
+        width: 100%;
+    }
+    /* Sections - Left Sidebar ---------------------------------------------- */
+    #left-sidebar {
+        display: none;
+    }
+    /* Sections - Right Sidebar --------------------------------------------- */
+    #right-sidebar {
+        display: none;
+    }
+    /* Sections - Left Container -------------------------------------------- */
+    #left-container.TTTT,
+    #left-container.FTTT,
+    #left-container.TTTF,
+    #left-container.FTTF,
+    #left-container.TTFT,
+    #left-container.FTFT,
+    #left-container.TTFF,
+    #left-container.FTFF {
+        width: 14.99%;
+    }
+    #left-container.TFTT,
+    #left-container.FFTT,
+    #left-container.TFTF,
+    #left-container.FFTF,
+    #left-container.TFFT,
+    #left-container.FFFT,
+    #left-container.TFFF,
+    #left-container.FFFF {
+        width: 0%;
+    }
+    /* Sections - Right Container ------------------------------------------- */
+    #right-container {
+        display: none;
+    }
+    /* Controls (Show Sidebar) ---------------------------------------------- */
+    #showLeftSidebar,
+    #showRightSidebar {
+        display: none;
+    }
+    /* Controls (Hide All) -------------------------------------------------- */
+    #hideLeftSection,
+    #hideRightSection {
+        display: none;
+    }
+    /* Controls (Show All) -------------------------------------------------- */
+    #showLeftSection,
+    #showRightSection {
+        display: none;
+    }
+    /* Controls (Show Timeline) --------------------------------------------- */
+    #showRightContainer {
+        display: none;
+    }
+    /* Controls (Show Objects) ---------------------------------------------- */
+    #main-container.TTTT #showLeftContainer,
+    #main-container.FTTT #showLeftContainer,
+    #main-container.TTTF #showLeftContainer,
+    #main-container.FTTF #showLeftContainer,
+    #main-container.TTFT #showLeftContainer,
+    #main-container.FTFT #showLeftContainer,
+    #main-container.TTFF #showLeftContainer,
+    #main-container.FTFF #showLeftContainer,
+    #main-container.FFTT #showLeftContainer {
+        display: none;
+    }
+    #main-container.TFTT #showLeftContainer,
+    #main-container.TFTF #showLeftContainer,
+    #main-container.FFTF #showLeftContainer,
+    #main-container.TFFT #showLeftContainer,
+    #main-container.FFFT #showLeftContainer,
+    #main-container.TFFF #showLeftContainer,
+    #main-container.FFFF #showLeftContainer {
+        display: block;
+    }
+}
+
+
+/* Really Small Dekstop ----------------------------------------------------- */
+
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+    /* Sections - Main Container -------------------------------------------- */
+    #main-container {
+        width: 100%;
+    }
+    /* Sections - Left Sidebar ---------------------------------------------- */
+    #left-sidebar {
+        display: none;
+    }
+    /* Sections - Right Sidebar --------------------------------------------- */
+    #right-sidebar {
+        display: none;
+    }
+    /* Sections - Left Container -------------------------------------------- */
+    #left-container {
+        display: none;
+    }
+    /* Sections - Right Container ------------------------------------------- */
+    #right-container {
+        display: none;
+    }
+    /* Controls (Show Sidebar) ---------------------------------------------- */
+    #showLeftSidebar,
+    #showRightSidebar {
+        display: none;
+    }
+    /* Controls (Hide All) -------------------------------------------------- */
+    #hideLeftSection,
+    #hideRightSection {
+        display: none;
+    }
+    /* Controls (Show All) -------------------------------------------------- */
+    #showLeftSection,
+    #showRightSection {
+        display: none;
+    }
+    /* Controls (Show Timeline) --------------------------------------------- */
+    #showRightContainer {
+        display: none;
+    }
+    /* Controls (Show Objects) ---------------------------------------------- */
+    #showLeftContainer {
+        display: none;
+    }
+}
