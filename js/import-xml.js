@@ -2,19 +2,16 @@ function error() {
     console.log("No XML found!");
 }
 
-function leftSidebar(xml) {
-    var title = $(xml).find("list").attr("title");
-    var count = $(xml).find("category").size();
-    $("#drop-groupslist .label, #left-sidebar .title .label").append(title);
-    $("#drop-groupslist .count, #left-sidebar .title .count").append(" (" + count + ")");
-    $(xml).find("category").each(function () {
-        var header = $(this).find("header").text();
-        var sheader = header.substr(0, 16);
-        $('<li><h1><a href="#">' + title + '</a></h1></li>').appendTo("#groupslist ol");
-        if (header.length < 17) {
-            $('<option>' + header + '</option>').appendTo("#drop-groupslist select");
+function leftSidebarJSON(data) {
+    $("#drop-groupslist .label, #left-sidebar .title .label").append(data.title);
+    $("#drop-groupslist .count, #left-sidebar .title .count").append(" (" + data.items.length + ")");
+    $(data.items).each(function () {
+        $('<li><h1><a href="#">' + this.header + '</a></h1></li>').appendTo("#groupslist ol");
+
+        if (this.header.length < 17) {
+            $('<option>' + this.header + '</option>').appendTo("#drop-groupslist select");
         } else {
-            $('<option>' + sheader + '...</option>').appendTo("#drop-groupslist select");
+            $('<option>' + this.header.substr(0, 16) + '...</option>').appendTo("#drop-groupslist select");
         }
     });
 }
@@ -31,13 +28,12 @@ function rightSidebar(xml) {
 }
 
 function leftContainerJSON(data) {
-    var dCount = data.items.length;
-    var dTitle = data.title;    
-    $("#drop-masterlist .label, #left-container .title .label").append(dTitle);
-    $("#drop-masterlist .count, #left-container .title .count").append(" (" + dCount + ")");
+    $("#drop-masterlist .label, #left-container .title .label").append(data.title);
+    $("#drop-masterlist .count, #left-container .title .count").append(" (" + data.items.length + ")");
 
-    $(data.items).each(function (index) {
+    $(data.items).each(function () {
         $('<article class="list-object"><aside>' + this.subheader + '</aside><header><h2>' + this.header + '</h2><h3>' + this.kpi + '</h3></header><footer><ul class="switch"><li class="more"><button type="button">more</button></li><li class="less"><button type="button">less</button></li></ul><ul class="attributes"><li>' + this.attribute1 + '</li><li class="right">' + this.attribute2 + '</li><li>' + this.attribute3 + '</li><li class="right">' + this.attribute4 + '</li></ul></footer></article>').appendTo("#masterlist");
+
         if (this.header.length < 26) {
             $('<option>' + this.header + '</option>').appendTo("#drop-masterlist select");
         } else {
@@ -46,18 +42,11 @@ function leftContainerJSON(data) {
     });
 }
 
-function rightContainer(xml) {
-    var title = $(xml).find("feed").attr("title");
-    var count = $(xml).find("entry").size();
-    $("#right-container .title .label").append(title);
-    $("#right-container .title .count").append(" (" + count + ")");
-    $(xml).find("entry").each(function () {
-        var header = $(this).find("title").text();
-        var date = $(this).find("date").text();
-        var time = $(this).find("timestamp").text();
-        var user = $(this).find("user").text();
-        var message = $(this).find("message").text();
-        $('<article><h3>' + header + '</h3><p class="details">created on ' + date + ', at ' + time + ' by <a href="#">' + user + '</a></p><p class="message">' + message + '</p></article>').appendTo("#timeline");
+function rightContainerJSON(data) {
+    $("#right-container .title .label").append(data.title);
+    $("#right-container .title .count").append(" (" + data.items.length + ")");
+    $(data.items).each(function () {
+        $('<article><h3>' + this.title + '</h3><p class="details">created on ' + this.date + ', at ' + this.timestamp + ' by <a href="#">' + this.user + '</a></p><p class="message">' + this.message + '</p></article>').appendTo("#timeline");
     });
 }
 
@@ -95,12 +84,12 @@ function simpleForm(xml) {
 
 function getXML() {
     $.ajax({
-        type: "GET",
-        url: "./xml/leftSidebarContent.xml",
-        dataType: "xml",
-        success: leftSidebar,
+        dataType: "json",
+        url: "./json/leftSidebarContent.json",
+        success: leftSidebarJSON,
         error: error
     });
+
     $.ajax({
         type: "GET",
         url: "./xml/rightSidebarContent.xml",
@@ -114,11 +103,11 @@ function getXML() {
         success: leftContainerJSON,
         error: error
     });
+
     $.ajax({
-        type: "GET",
-        url: "./xml/rightContainerContent.xml",
-        dataType: "xml",
-        success: rightContainer,
+        dataType: "json",
+        url: "./json/rightContainerContent.json",
+        success: rightContainerJSON,
         error: error
     });
     $.ajax({
