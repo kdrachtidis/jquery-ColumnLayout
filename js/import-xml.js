@@ -1,10 +1,11 @@
 function error() {
-    console.log("No XML found!");
+    console.log("No JSON found!");
 }
 
 function leftSidebarJSON(data) {
     $("#drop-groupslist .label, #left-sidebar .title .label").append(data.title);
     $("#drop-groupslist .count, #left-sidebar .title .count").append(" (" + data.items.length + ")");
+
     $(data.items).each(function () {
         $('<li><h1><a href="#">' + this.header + '</a></h1></li>').appendTo("#groupslist ol");
 
@@ -43,44 +44,40 @@ function leftContainerJSON(data) {
 function rightContainerJSON(data) {
     $("#right-container .title .label").append(data.title);
     $("#right-container .title .count").append(" (" + data.items.length + ")");
+
     $(data.items).each(function () {
         $('<article><h3>' + this.title + '</h3><p class="details">created on ' + this.date + ', at ' + this.timestamp + ' by <a href="#">' + this.user + '</a></p><p class="message">' + this.message + '</p></article>').appendTo("#timeline");
     });
 }
 
-function mainContainer(xml) {
-    var header = $(xml).find("header1").text();
-    var subheader = $(xml).find("header2").text();
-    $("span.header-1").append(header);
-    $("span.header-2").append(subheader);
-    $(xml).find("kpi").each(function () {
-        var kpi = $(this).text();
-        var label = $(this).attr("title");
-        $('<li><span class="kpi-amount">' + kpi + '</span><span class="kpi-title">' + label + '</span></li>').appendTo("#objectheader div.kpi ol");
+function mainContainerJSON(data){
+    $("span.header-1").append(data.header);
+    $("span.header-2").append(data.subheader);
+
+    $(data.kpis).each(function () {
+        $('<li><span class="kpi-amount">' + this.label + '</span><span class="kpi-title">' + this.value + '</span></li>').appendTo("#objectheader div.kpi ol");
     });
-    $(xml).find("attribute").each(function () {
-        var attribute = $(this).text();
-        $('<li>' + attribute + '</li>').appendTo("#objectheader div.attribute ol");
+
+    $(data.attributes).each(function () {
+        $('<li>' + this.value + '</li>').appendTo("#objectheader div.attribute ol");
     });
-    $(xml).find("status").each(function () {
-        var status = $(this).text();
-        $('<li>' + status + '</li>').appendTo("#objectheader div.status ol");
+
+    $(data.status).each(function () {
+        $('<li>' + this.value + '</li>').appendTo("#objectheader div.status ol");
     });
-    $(xml).find("tabcontainer").each(function () {
-        var tabcontainer = $(this).attr("tab");
-        $('<li><a href="#">' + tabcontainer + '</a></li>').appendTo("#tabMenu ol");
+
+    $(data.tabs).each(function () {
+        $('<li><a href="#">' + this.label + '</a></li>').appendTo("#tabMenu ol");
     });
 }
 
-function simpleForm(xml) {
-    $(xml).find("entry").each(function () {
-        var label = $(this).attr("label");
-        var amount = $(this).text();
-        $('<p class="form-entry"><span class="label">' + label + '</span><span class="amount">' + amount + '</span></p>').appendTo(".form-content");
+function simpleFormJSON(data){
+    $(data.items).each(function () {
+        $('<p class="form-entry"><span class="label">' + this.label + '</span><span class="amount">' + this.amount + '</span></p>').appendTo(".form-content");
     });
 }
 
-function getXML() {
+function getData() {
     $.ajax({
         dataType: "json",
         url: "./json/leftSidebarContent.json",
@@ -108,22 +105,22 @@ function getXML() {
         success: rightContainerJSON,
         error: error
     });
+   
     $.ajax({
-        type: "GET",
-        url: "./xml/ObjectContent.xml",
-        dataType: "xml",
-        success: mainContainer,
+        dataType: "json",
+        url: "./json/ObjectContent.json",
+        success: mainContainerJSON,
         error: error
     });
+
     $.ajax({
-        type: "GET",
-        url: "./xml/simpleFormContent.xml",
-        dataType: "xml",
-        success: simpleForm,
+        dataType: "json",
+        url: "./json/simpleFormContent.json",
+        success: simpleFormJSON,
         error: error
     });
 }
 
 $(document).ready(function () {
-    getXML();
+    getData();
 });

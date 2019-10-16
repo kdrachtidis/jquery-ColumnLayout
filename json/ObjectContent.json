@@ -1,0 +1,88 @@
+{
+    "header": "Header Data That Can Be That Long and Even Longer",
+    "subheader": "Details of the Header Above",
+    "kpis": [
+        {
+            "label": "Label of the KPI1",
+            "value": "999.999.999,99"
+        },
+        {
+            "label": "Label of the KPI2",
+            "value": "100.00%"
+        },
+        {
+            "label": "Label of the KPI3",
+            "value": "99.99%"
+        },
+        {
+            "label": "Label of the KPI4",
+            "value": "99.99%"
+        }
+    ],
+    "attributes": [
+        {
+            "value": "Attribute 1"
+        },
+        {
+            "value": "Attribute 2"
+        },
+        {
+            "value": "Attribute 3"
+        },
+        {
+            "value": "Attribute 4"
+        },
+        {
+            "value": "Attribute 5"
+        },
+        {
+            "value": "Attribute 6"
+        },
+        {
+            "value": "Attribute 7"
+        },
+        {
+            "value": "Attribute 8"
+        },
+        {
+            "value": "Attribute 9"
+        },
+        {
+            "value": "Attribute 10"
+        }
+    ],
+    "status": [
+        {
+            "value": "Status 1"
+        },
+        {
+            "value": "Status 2"
+        },
+        {
+            "value": "Status 3"
+        },
+        {
+            "value": "Status 4"
+        }
+    ],
+    "tabs": [
+        {
+            "label": "Tab 1"
+        },
+        {
+            "label": "Tab 2"
+        },
+        {
+            "label": "Tab 3"
+        },
+        {
+            "label": "Tab 4"
+        },
+        {
+            "label": "Tab 5"
+        },
+        {
+            "label": "Tab 6"
+        }
+    ]
+}
