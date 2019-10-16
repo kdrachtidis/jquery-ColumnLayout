@@ -74,7 +74,7 @@ function toggleContainer(newContainerClass) {
 function controls() {
     event.preventDefault();
     /* Hide Left Sidebar ---------------------------------------------------- */
-    $("#hideLeftSidebar").click(function() {
+    $("#hideLeftSidebar").click(function () {
         if (leftSidebarStatus === true && leftContainerStatus === true) {
             if (rightContainerStatus === true && rightSidebarStatus === true) {
                 toggleContainer("FTTT");
@@ -106,7 +106,7 @@ function controls() {
         }
     });
     /* Show Left Sidebar ---------------------------------------------------- */
-    $("#showLeftSidebar").click(function() {
+    $("#showLeftSidebar").click(function () {
         if (leftSidebarStatus === false && leftContainerStatus === true) {
             if (rightContainerStatus === true && rightSidebarStatus === true) {
                 toggleContainer("TTTT");
@@ -124,7 +124,7 @@ function controls() {
         }
     });
     /* Hide Right Sidebar --------------------------------------------------- */
-    $("#hideRightSidebar").click(function() {
+    $("#hideRightSidebar").click(function () {
         if (rightContainerStatus === true && rightSidebarStatus === true) {
             if (leftSidebarStatus === true && leftContainerStatus === true) {
                 toggleContainer("TTTF");
@@ -158,7 +158,7 @@ function controls() {
         }
     });
     /* Show Right Sidebar --------------------------------------------------- */
-    $("#showRightSidebar").click(function() {
+    $("#showRightSidebar").click(function () {
         if (rightContainerStatus === true && rightSidebarStatus === false) {
             if (leftSidebarStatus === true && leftContainerStatus === true) {
                 toggleContainer("TTTT");
@@ -176,7 +176,7 @@ function controls() {
         }
     });
     /* Hide Left Section ---------------------------------------------------- */
-    $("#hideLeftSection").click(function() {
+    $("#hideLeftSection").click(function () {
         if (leftSidebarStatus === true && leftContainerStatus === true) {
             if (rightContainerStatus === true && rightSidebarStatus === true) {
                 toggleContainer("FFTT");
@@ -195,7 +195,7 @@ function controls() {
         }
     });
     /* Show Left Section ---------------------------------------------------- */
-    $("#showLeftSection").click(function() {
+    $("#showLeftSection").click(function () {
         if (leftSidebarStatus === false && leftContainerStatus === false) {
             if (rightContainerStatus === true && rightSidebarStatus === true) {
                 toggleContainer("TTTT");
@@ -214,7 +214,7 @@ function controls() {
         }
     });
     /* Hide Right Section --------------------------------------------------- */
-    $("#hideRightSection").click(function() {
+    $("#hideRightSection").click(function () {
         if (rightContainerStatus === true && rightSidebarStatus === true) {
             if (leftSidebarStatus === true && leftContainerStatus === true) {
                 toggleContainer("TTFF");
@@ -233,7 +233,7 @@ function controls() {
         }
     });
     /* Show Right Section --------------------------------------------------- */
-    $("#showRightSection").click(function() {
+    $("#showRightSection").click(function () {
         if (rightContainerStatus === false && rightSidebarStatus === false) {
             if (leftSidebarStatus === true && leftContainerStatus === true) {
                 toggleContainer("TTTT");
@@ -252,7 +252,7 @@ function controls() {
         }
     });
     /* Hide Left Container -------------------------------------------------- */
-    $("#hideLeftContainer").click(function() {
+    $("#hideLeftContainer").click(function () {
         if (leftSidebarStatus === true && leftContainerStatus === true) {
             if (rightContainerStatus === true && rightSidebarStatus === true) {
                 toggleContainer("TFTT");
@@ -284,7 +284,7 @@ function controls() {
         }
     });
     /* Show Left Container -------------------------------------------------- */
-    $("#showLeftContainer").click(function() {
+    $("#showLeftContainer").click(function () {
         if (leftSidebarStatus === true && leftContainerStatus === false) {
             if (rightContainerStatus === true && rightSidebarStatus === true) {
                 toggleContainer("TTTT", "left");
@@ -316,7 +316,7 @@ function controls() {
         }
     });
     /* Hide Right Container ------------------------------------------------- */
-    $("#hideRightContainer").click(function() {
+    $("#hideRightContainer").click(function () {
         if (rightContainerStatus === true && rightSidebarStatus === true) {
             if (leftSidebarStatus === true && leftContainerStatus === true) {
                 toggleContainer("TTFT");
@@ -348,7 +348,7 @@ function controls() {
         }
     });
     /* Show Right Container ------------------------------------------------- */
-    $("#showRightContainer").click(function() {
+    $("#showRightContainer").click(function () {
         if (rightContainerStatus === false && rightSidebarStatus === true) {
             if (leftSidebarStatus === true && leftContainerStatus === true) {
                 toggleContainer("TTTT");
