@@ -16,14 +16,12 @@ function leftSidebarJSON(data) {
     });
 }
 
-function rightSidebar(xml) {
-    var title = $(xml).find("list").attr("title");
-    var count = $(xml).find("source").size();
-    $("#right-sidebar .title .label").append(title);
-    $("#right-sidebar .title .count").append(" (" + count + ")");
-    $(xml).find("source").each(function () {
-        var header = $(this).find("header").text();
-        $('<li><a href="#">' + header + '</a></li>').appendTo("#resources ol");
+function rightSidebarJSON(data){
+    $("#right-sidebar .title .label").append(data.title);
+    $("#right-sidebar .title .count").append(" (" + data.items.length + ")");
+
+    $(data.items).each(function () {
+        $('<li><a href="#">' + this.header + '</a></li>').appendTo("#resources ol");
     });
 }
 
@@ -91,12 +89,12 @@ function getXML() {
     });
 
     $.ajax({
-        type: "GET",
-        url: "./xml/rightSidebarContent.xml",
-        dataType: "xml",
-        success: rightSidebar,
+        dataType: "json",
+        url: "./json/rightSidebarContent.json",
+        success: rightSidebarJSON,
         error: error
     });
+
     $.ajax({
         dataType: "json",
         url: "./json/leftContainerContent.json",
