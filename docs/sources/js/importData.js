@@ -80,42 +80,42 @@ function simpleFormJSON(data){
 function getData() {
     $.ajax({
         dataType: "json",
-        url: "./json/leftSidebarContent.json",
+        url: "./data/leftSidebarContent.min.json",
         success: leftSidebarJSON,
         error: error
     });
 
     $.ajax({
         dataType: "json",
-        url: "./json/rightSidebarContent.json",
+        url: "./data/rightSidebarContent.min.json",
         success: rightSidebarJSON,
         error: error
     });
 
     $.ajax({
         dataType: "json",
-        url: "./json/leftContainerContent.json",
+        url: "./data/leftContainerContent.min.json",
         success: leftContainerJSON,
         error: error
     });
 
     $.ajax({
         dataType: "json",
-        url: "./json/rightContainerContent.json",
+        url: "./data/rightContainerContent.min.json",
         success: rightContainerJSON,
         error: error
     });
    
     $.ajax({
         dataType: "json",
-        url: "./json/ObjectContent.json",
+        url: "./data/ObjectContent.min.json",
         success: mainContainerJSON,
         error: error
     });
 
     $.ajax({
         dataType: "json",
-        url: "./json/simpleFormContent.json",
+        url: "./data/simpleFormContent.min.json",
         success: simpleFormJSON,
         error: error
     });

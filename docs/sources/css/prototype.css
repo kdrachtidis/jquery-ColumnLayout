@@ -1,17 +1,3 @@
-/* Import layouts ----------------------------------------------------------- */
-
-@import url("initial.css") only screen;
-@import url("colors.css") only screen;
-@import url("layout.css") only screen and (orientation: landscape);
-@import url("desktop.css") only screen and (min-device-width: 1024px) and (orientation: landscape);
-@import url("tablet-landscape.css") only screen and (orientation: landscape);
-@import url("tablet-portrait.css");
-@font-face {
-    font-family: "font-awesome";
-    src: url("../ttf/fontawesome-webfont.ttf");
-}
-
-
 /* Top Header --------------------------------------------------------------- */
 
 #app-header {
