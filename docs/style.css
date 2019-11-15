@@ -7,7 +7,3 @@
 @import url("styles/desktop.min.css") only screen and (min-device-width: 1024px) and (orientation: landscape);
 @import url("styles/tablet-landscape.min.css") only screen and (max-device-width: 1024px) and (orientation: landscape);
 @import url("styles/tablet-portrait.min.css") only screen and (max-device-width: 1024px) and (orientation: portrait);;
-@font-face {
-    font-family: "font-awesome";
-    src: url("fonts/fontawesome-webfont.ttf");
-}
