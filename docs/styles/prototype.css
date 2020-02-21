@@ -1,0 +1,115 @@
+/* Sections - Overall Layout ------------------------------------------------ */
+
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+#container>section {
+    height: 100%;
+}
+
+/* Section Controls --------------------------------------------------------- */
+
+.controls ul {
+    width: 100%;
+}
+
+#main-container .controls ul {
+    width: 13%;
+}
+
+.controls ul li {
+    min-width: 32px;
+    max-width: 64px;
+    width: 16%;
+}
+
+.controls ul.right {
+    float: right;
+}
+
+.controls button {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    height: 2rem;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: "font-awesome";
+}
+
+.right {
+    float: right;
+}
+
+
+/* Controls Icons ----------------------------------------------------------- */
+
+#hideLeftSidebar:after,
+#hideLeftContainer:after,
+#hideLeftSection:after {
+    content: "\f0a8";
+}
+
+#hideRightSidebar:after,
+#hideRightContainer:after,
+#hideRightSection:after {
+    content: "\f0a9";
+}
+
+#showLeftSidebar:after,
+#showLeftContainer:after,
+#showLeftSection:after {
+    content: "\f0a9";
+}
+
+#showRightSidebar:after,
+#showRightContainer:after,
+#showRightSection:after {
+    content: "\f0a8";
+}
+
+/* Left Container ----------------------------------------------------------- */
+
+#left-container {
+    z-index: 9999;
+    box-shadow: -2px 0 2px 0 #cccccc;
+    -moz-box-shadow: -2px 0 2px 0 #cccccc;
+    -webkit-box-shadow: -2px 0 2px 0 #cccccc;
+}
+
+/* Right Container ---------------------------------------------------------- */
+
+#right-container {
+    z-index: 9999;
+    box-shadow: 2px 0 2px 0 #cccccc;
+    -moz-box-shadow: 2px 0 2px 0 #cccccc;
+    -webkit-box-shadow: 2px 0 2px 0 #cccccc;
+}
+
+/* Right Side Container ----------------------------------------------------- */
+
+#right-sidebar {
+    float: right;
+}
+
+/* Main Container ----------------------------------------------------------- */
+
+#main-container {
+    z-index: 99999;
+    box-shadow: 0 0 2px 0 #cccccc;
+    -moz-box-shadow: 0 0 2px 2px #cccccc;
+    -webkit-box-shadow: 0 0 2px 2px #cccccc;
+}
+
+/* Hide/Show Sections ------------------------------------------------------- */
+
+#right-container.minimised header,
+#right-container.minimised nav {
+    pointer-events: none;
+    text-indent: 99999px;
+}
