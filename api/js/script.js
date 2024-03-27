@@ -20,4 +20,5 @@ $(window).load(function () {
     console.log("5. Initial Sections status: " + leftSidebarStatus + " // " + leftContainerStatus + " // " + rightContainerStatus + " // " + rightSidebarStatus);
     console.log("--- --- ---");
     controls();
+    /* Test */
 });
