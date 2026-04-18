@@ -1,0 +1,14 @@
+name: column-layout
+version: 1.0.0
+
+services:
+  frontend:
+    build:
+      context: ./docs
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - ./docs:/usr/share/nginx/html
+    restart: always
+    container_name: column-layout-frontend
