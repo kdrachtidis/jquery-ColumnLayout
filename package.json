@@ -5,7 +5,8 @@
   "main": "api.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "watch": "browser-sync start --config bs-config.js"
   },
   "repository": {
     "type": "git",
@@ -18,13 +19,13 @@
   },
   "homepage": "https://github.com/kdrachtidis/five-column-layout#readme",
   "devDependencies": {
+    "browser-sync": "^3.0.4",
     "grunt": "^1.4.1",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-jshint": "^3.2.0",
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-minjson": "^0.4.0",
-    "nodemon": "^3.1.14"
+    "grunt-minjson": "^0.4.0"
   }
 }
