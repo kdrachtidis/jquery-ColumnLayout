@@ -1,7 +1,0 @@
-{
-    "restartable": "rs",
-    "watch": [
-        "docs"
-    ],
-    "ext": "js, json"
-}
