@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>leftSidebar</title>
+    <meta charset="UTF-8">
+
+    <style>
+        @font-face {
+            font-family: "font-awesome";
+            src: url("../../fonts/fontawesome-webfont.ttf");
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+    <script src="../../src/js/importLeftSidebar.min.js"></script>
+    <script>
+        $(document).ready(getLeftSidebarData('../..'));
+    </script>
+</head>
+
+<body>
+    <div id="leftSidebar">
+        <aside class="controls">
+            <ul>
+                <li class="right">
+                    <button type="button" id="hideLeftSidebar"></button>
+                </li>
+            </ul>
+        </aside>
+        <header class="title">
+            <span class="label"></span><span class="count"></span>
+        </header>
+        <aside class="search">
+            <input type="search" name="search-group">
+        </aside>
+        <section class="content">
+            <ol></ol>
+        </section>
+    </div>
+
+</body>
+
+</html>

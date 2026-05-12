@@ -1,0 +1,14 @@
+/* Import layouts ----------------------------------------------------------- */
+
+@import url("src/css/initial.min.css") only screen;
+@import url("src/css/style_common.min.css") only screen;
+@import url("src/css/style_mainContainer.min.css") only screen;
+@import url("src/css/style_leftContainer.min.css") only screen;
+@import url("src/css/style_leftSidebar.min.css") only screen;
+@import url("src/css/style_rightContainer.min.css") only screen;
+@import url("src/css/style_rightSidebar.min.css") only screen;
+@import url("src/css/style_shellBar.min.css") only screen;
+@import url("src/css/layout.min.css") only screen and (orientation: landscape);
+@import url("src/css/desktop.min.css") only screen and (min-device-width: 1024px) and (orientation: landscape);
+@import url("src/css/tablet-landscape.min.css") only screen and (max-device-width: 1024px) and (orientation: landscape);
+@import url("src/css/tablet-portrait.min.css") only screen and (max-device-width: 1024px) and (orientation: portrait);;

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>rightSidebar</title>
+    <meta charset="UTF-8">
+
+    <style>
+        @font-face {
+            font-family: "font-awesome";
+            src: url("../../fonts/fontawesome-webfont.ttf");
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+    <script src="../../src/js/importRightSidebar.min.js"></script>
+    <script>
+        $(document).ready(getRightSidebarData('../..'));
+    </script>
+</head>
+
+<body>
+    <div id="rightSidebar">
+        <aside class="controls">
+            <ul>
+                <li>
+                    <button type="button" id="hideRightSidebar"></button>
+                </li>
+            </ul>
+        </aside>
+        <header class="title">
+            <span class="label"></span><span class="count"></span>
+        </header>
+        <section class="content">
+            <ol></ol>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,14 +1,23 @@
 name: column-layout
-version: 1.0.0
 
 services:
-  frontend:
+  frontend-empty:
     build:
-      context: ./docs
+      context: ./docs/demo-empty
       dockerfile: Dockerfile
     ports:
-      - "80:80"
+      - "8080:80"
     volumes:
-      - ./docs:/usr/share/nginx/html
+      - ./docs/demo-empty:/usr/share/nginx/html
     restart: always
-    container_name: column-layout-frontend
+    container_name: column-layout-frontend-empty
+  frontend-content:
+    build:
+      context: ./docs/demo-content
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
+    volumes:
+      - ./docs/demo-content:/usr/share/nginx/html
+    restart: always
+    container_name: column-layout-frontend-content
