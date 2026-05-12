@@ -26,7 +26,11 @@ module.exports = function (grunt) {
                 files: [
                     {
                         src: ['api.min.js'],
-                        dest: 'docs/api.min.js'
+                        dest: 'docs/demo-content/api.min.js'
+                    },
+                    {
+                        src: ['api.min.js'],
+                        dest: 'docs/demo-empty/api.min.js'
                     }
                 ]
             }

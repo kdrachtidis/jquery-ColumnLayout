@@ -14,12 +14,6 @@ var currentContainerClass;
 /* Variables - Effects ------------------------------------------------------ */
 var animDuration = 1000;
 
-/* Print status ------------------------------------------------------------- */
-function printStatus() {
-    console.log("Sections status: " + leftSidebarStatus + " // " + leftContainerStatus + " // " + rightContainerStatus + " // " + rightSidebarStatus);
-    console.log("Main Container's class: " + currentContainerClass);
-}
-
 /* Check initial status ----------------------------------------------------- */
 function checkLoadStatus() {
     if ($(window).width() > largeScreen) {
