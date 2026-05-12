@@ -33,6 +33,20 @@ module.exports = function (grunt) {
         qunit: {
             files: ['test/**/*.html']
         },
+        copy: {
+            main: {
+                files: [
+                    {
+                        src: ['dist/<%= pkg.name %>.min.js'],
+                        dest: 'docs/demo-content/<%= pkg.name %>.min.js'
+                    },
+                    {
+                        src: ['dist/<%= pkg.name %>.min.js'],
+                        dest: 'docs/demo-empty/<%= pkg.name %>.min.js'
+                    }
+                ]
+            }
+        },
         watch: {
             files: ['<%= jshint.files %>'],
             tasks: ['jshint', 'concat','uglify'],
@@ -47,7 +61,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['jshint', 'concat', 'qunit', 'uglify', 'watch']);
+    grunt.registerTask('default', ['jshint', 'concat', 'qunit', 'uglify', 'copy', 'watch']);
 
 };
