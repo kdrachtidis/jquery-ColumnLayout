@@ -3,44 +3,51 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        watch: {
-            scripts: {
-                files: ['api/js/*.js', '*.js'],
-                tasks: ['jshint', 'copy']
-            }
-        },
         jshint: {
-            files: ['Gruntfile.js', 'api/**/*.js'],
+            files: ['Gruntfile.js', 'src/**/*.js'],
             options: {
                 browser: true
             }
         },
-        uglify: {
-            buildAPI: {
-                src: ['api/js/*.js'],
-                dest: 'api.min.js'
+
+        concat: {
+            options: {
+                separator: ';'
+            },
+            dist: {
+                src: ['src/**/*.js'],
+                dest: 'dist/<%= pkg.name %>.js'
             }
         },
-        copy: {
-            main: {
-                files: [
-                    {
-                        src: ['api.min.js'],
-                        dest: 'docs/demo-content/api.min.js'
-                    },
-                    {
-                        src: ['api.min.js'],
-                        dest: 'docs/demo-empty/api.min.js'
-                    }
-                ]
+
+        uglify: {
+            options: {
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+            },
+            dist: {
+                files: {
+                    'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+                }
+            }
+        },
+        qunit: {
+            files: ['test/**/*.html']
+        },
+        watch: {
+            files: ['<%= jshint.files %>'],
+            tasks: ['jshint', 'concat','uglify'],
+            options: {
+                reload: true
             }
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['jshint', 'copy', 'watch']);
+    grunt.registerTask('default', ['jshint', 'concat', 'qunit', 'uglify', 'watch']);
 
 };
