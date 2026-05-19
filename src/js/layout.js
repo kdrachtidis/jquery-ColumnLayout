@@ -14,49 +14,6 @@ var currentContainerClass;
 /* Variables - Effects ------------------------------------------------------ */
 var animDuration = 1000;
 
-/* Check initial status ----------------------------------------------------- */
-function checkLoadStatus() {
-    if ($(window).width() > largeScreen) {
-        leftSidebarStatus = true;
-        leftContainerStatus = true;
-        rightContainerStatus = true;
-        rightSidebarStatus = true;
-        console.log("3. The screen is Large.");
-        $("#left-sidebar, #left-container, #main-container, #right-container, #right-sidebar").addClass("TTTT");
-        currentContainerClass = "TTTT";
-        return true;
-    } else if ($(window).width() <= largeScreen && $(window).width() > normalScreen) {
-        leftSidebarStatus = false;
-        leftContainerStatus = true;
-        rightContainerStatus = true;
-        rightSidebarStatus = false;
-        $("#left-sidebar, #left-container, #main-container, #right-container, #right-sidebar").addClass("FTTF");
-        currentContainerClass = "FTTF";
-        console.log("3. The screen is Normal.");
-        return true;
-    } else if ($(window).width() <= normalScreen && $(window).width() > smallScreen) {
-        leftSidebarStatus = false;
-        leftContainerStatus = true;
-        rightContainerStatus = false;
-        rightSidebarStatus = false;
-        $("#left-sidebar, #left-container, #main-container, #right-container, #right-sidebar").addClass("FTFF");
-        currentContainerClass = "FTFF";
-        console.log("3. The screen is Small.");
-        return true;
-    } else if ($(window).width() <= smallScreen) {
-        leftSidebarStatus = false;
-        leftContainerStatus = false;
-        rightContainerStatus = false;
-        rightSidebarStatus = false;
-        $("#left-sidebar, #left-container, #main-container, #right-container, #right-sidebar").addClass("FFFF");
-        currentContainerClass = "FFFF";
-        console.log("3. The screen is really Small.");
-        return true;
-    } else {
-        console.log("3. No initial screen size identified, please reload!");
-        return false;
-    }
-}
 /* Show/Hide Effect Function ------------------------------------------------ */
 function toggleContainer(newContainerClass) {
     $("#left-sidebar, #left-container, #main-container, #right-container, #right-sidebar").switchClass(currentContainerClass, newContainerClass, animDuration, "linear");
